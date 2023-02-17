@@ -1,0 +1,28 @@
+{
+  "name": "fullstack-web-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KenEkm/Fullstack-Web-Application.git"
+  },
+  "author": "Kenan Ekmekci",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KenEkm/Fullstack-Web-Application/issues"
+  },
+  "homepage": "https://github.com/KenEkm/Fullstack-Web-Application#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
