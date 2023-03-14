@@ -1,10 +1,10 @@
-<div>
-    <label>Title</label>
-    <input type="text" name="title" value="<%= book.title %>">
+<div class="mb-3">
+    <label class="form-label">Title</label>
+    <input class="form-control w-50" type="text" name="title" value="<%= book.title %>">
 </div>
-<div>
-    <label>Author</label>
-    <select name="author">
+<div class="mb-3">
+    <label class="form-label">Author</label>
+    <select class="form-select w-25" name="author">
     <% authors.forEach(author => { %>
         <% if (author.id === book.author) { %>
         <option selected label="<%= author.name %>" value="<%= author.id %>">
@@ -14,21 +14,21 @@
     <% }) %>
     </select>
 </div>
-<div>
-    <label>Publish Date</label>
-    <input type="date" name="publishDate"
+<div class="mb-3">
+    <label class="form-label">Publish Date</label>
+    <input class="form-control w-25" type="date" name="publishDate"
             value="<%= book.publishDate == null ? '' : book.publishDate.toISOString().split('T')[0] %>">
 </div>
-<div>
-    <label>Page Count</label>
-    <input type="number" name="pageCount" min="1" value="<%= book.pageCount %>">
+<div class="mb-3">
+    <label class="form-label">Page Count</label>
+    <input class="form-control w-25" type="number" name="pageCount" min="1" value="<%= book.pageCount %>">
 </div>
 
-<div>
-    <label>Cover</label>
+<div class="mb-3">
+    <label class="form-label">Cover</label>
     <input type="file" name="cover" class="filepond">
 </div>
-<div>
-    <label>Description</label>
-    <textarea name="description"><%= book.description %></textarea>
+<div class="mb-3">
+    <label class="form-label">Description</label>
+    <textarea class="form-control w-50" name="description"><%= book.description %></textarea>
 </div>

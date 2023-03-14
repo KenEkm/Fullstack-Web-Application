@@ -1,7 +1,9 @@
-<h2>New Book</h2>
+<div class="container">
+  <h2 class="display-5">New Book</h2>
 
-<form action="/books" method="POST">
-  <%- include('_form_fields') %>
-  <a href="/books">Cancel</a>
-  <button type="submit">Create</button>
-</form>
+  <form action="/books" method="POST">
+    <%- include('_form_fields') %>
+    <a href="/books" class="btn btn-secondary mb-2">Cancel</a>
+    <button type="submit" class="btn btn-success ms-1 mb-2">Create</button>
+  </form>
+</div>

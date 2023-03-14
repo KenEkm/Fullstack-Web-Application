@@ -1,24 +1,26 @@
-<h2>Search Book</h2>
+<div class="container">
+  <h2 class="display-5">Search Book</h2>
 
-<form action="/books" method="GET">
+  <form action="/books" method="GET">
+    <div class="mb-3">
+      <label class="form-label">Title</label>
+      <input class="form-control w-50" type="text" name="title" value="<%= searchOptions.title %>">
+    </div>
+    <div  class="mb-3">
+      <label class="form-label">Published After</label>
+      <input class="form-control w-25" type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %>">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Published Before</label>
+      <input class="form-control w-25" type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>">
+    </div>
+    <button class="btn btn-primary mb-3" type="submit">Search</button>
+  </form>
   <div>
-    <label>Title</label>
-    <input type="text" name="title" value="<%= searchOptions.title %>">
+    <% books.forEach(book => { %>
+      <a href="/books/<%= book.id %>">
+        <img height="150" width="100" src="<%= book.coverImagePath %>">
+      </a>
+    <% }) %>
   </div>
-  <div>
-    <label>Published After</label>
-    <input type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %>">
-  </div>
-  <div>
-    <label>Published Before</label>
-    <input type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>">
-  </div>
-  <button type="submit">Search</button>
-</form>
-<div>
-  <% books.forEach(book => { %>
-    <a href="/books/<%= book.id %>">
-      <img height="150" width="100" src="<%= book.coverImagePath %>">
-    </a>
-  <% }) %>
 </div>
