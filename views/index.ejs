@@ -1,24 +1,20 @@
 
 <div class="container text-center">
-  <div class="row">
-    <div class="col">
-      <h4 class="display-5">Recently Added</h4>
-    </div>
-    <div class="col-8"></div>
-    <div class="row">
-      <div class="col">
-        <% books.forEach(book => { %>
-          <div class="card text-bg-dark mb-2" style="width: 18rem;">
-            <img src="<%= book.coverImagePath %>" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"><%= book.title %></h5>
-              <p class="card-text"><%= book.description %></p>
-              <a href="/books/<%= book.id %>" class="btn btn-primary">Open</a>
+  <h4 class="display-5 text-start mt-5">Recently Added</h4>
+
+    <div class="row mt-4">
+      <% books.forEach(book => { %>
+        <div class="col">
+            <div class="card text-bg-dark mb-2" style="width: 18rem;">
+              <img src="<%= book.coverImagePath %>" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><%= book.title %></h5>
+                <p class="card-text"><%= book.description %></p>
+                <a href="/books/<%= book.id %>" class="btn btn-primary">Open</a>
+              </div>
             </div>
-          </div>
-        <% }) %>
-      </div>
-      
+        </div>
+      <% }) %>
     </div>
   </div>
 </div>

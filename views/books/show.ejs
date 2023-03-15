@@ -1,14 +1,14 @@
 <div class="container">
-    <h2 class="display-5">About The Book</h2>
+    <h2 class="display-5 mt-5">About The Book</h2>
 
-    <div class="card mb-3" style="max-width: 540px;">
+    <div class="card mb-3 mt-4" style="max-width: 540px;">
         <div class="row g-0">
           <div class="col-md-4">
             <img src="<%= book.coverImagePath %>" class="img-fluid rounded-start" alt="...">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-                <h5 class="card-title"><%= book.title %></h5>
+                <h5 class="card-title mt-2"><%= book.title %></h5>
                 <div>Author: <%= book.author.name %></div>
                 <div>Publish Date: <%= book.publishDate.toDateString() %></div>
                 <div>Page Count: <%= book.pageCount %></div>
