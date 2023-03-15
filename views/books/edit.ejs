@@ -1,9 +1,9 @@
 <div class="container">
-  <h2  class="display-5">Edit Book</h2>
+  <h2  class="display-5 mt-5">Edit Book</h2>
 
   <form action="/books/<%= book.id %>?_method=PUT" method="POST">
     <%- include('_form_fields') %>
-    <a href="/books" class="btn btn-secondary mb-2">Cancel</a>
-    <button type="submit" class="btn btn-primary ms-1 mb-2">Update</button>
+    <a href="/books" class="btn btn-secondary mb-5">Cancel</a>
+    <button type="submit" class="btn btn-primary ms-1 mb-5">Update</button>
   </form>
 </div>
